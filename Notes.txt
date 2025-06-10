@@ -1,0 +1,19 @@
+Ep-2 
+(31:48) =>
+There are two packages/dependencies that we can install,
+1. Dev Dependencies - devDependencies in a package.json file  are packages that are used during the development and testing of a project but are not required for the application to run in a production environment.(When we are in developing we require Dev Dependencies)
+2. Normal Dependencies - It is use production 
+
+(37:11) => (Video me galat bataya hai)
+Tilde (~):
+Restricts updates to only patch releases within the same minor version. For example, "~1.2.3" would allow versions 1.2.4, 1.2.5, etc., but not 1.3.0. 
+
+Caret (^) :
+Allows updates within the same major version, but also minor and patch releases. For example, "^1.2.3" would allow versions 1.2.4, 1.2.5, 1.3.0, 1.3.1, etc., but not 2.0.0. 
+
+
+(48:35) => 
+Transitive Dependencies => A transitive dependency in computer science refers to a functional dependency pattern where the value of one attribute is determined by another attribute, which in turn is determined by a third attribute. 
+like we just installed wanted to install parcel (npm install -D parcel), but we got a node _modules, in which there are many many files, why? Beacuse parcel has its dependencies, its dependencies has its dependencies, and that dependencies has its own dependencies and so on...
+
+ 
