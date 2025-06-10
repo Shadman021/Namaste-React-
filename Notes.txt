@@ -16,4 +16,7 @@ Allows updates within the same major version, but also minor and patch releases.
 Transitive Dependencies => A transitive dependency in computer science refers to a functional dependency pattern where the value of one attribute is determined by another attribute, which in turn is determined by a third attribute. 
 like we just installed wanted to install parcel (npm install -D parcel), but we got a node _modules, in which there are many many files, why? Beacuse parcel has its dependencies, its dependencies has its dependencies, and that dependencies has its own dependencies and so on...
 
- 
+Ep-3
+
+(26:24)
+jsx - HTML-like or XML-like syntax BUT it is not HTML in js file, both are different
