@@ -20,3 +20,16 @@ Ep-3
 
 (26:24)
 jsx - HTML-like or XML-like syntax BUT it is not HTML in js file, both are different
+
+Ep-5
+
+(44:38)
+There are two types of export/import
+
+-Default Export/Import: 
+export default Component;
+import Component from "path";
+
+-Named Export/Import:
+export const Component;
+import {Component} from "path";

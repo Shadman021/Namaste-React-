@@ -72,15 +72,46 @@ a:hover {
   transform: scale(1.05);
 }
 .slider {
+  background: #000;
   position: relative;
   width: 100%;
-  margin: auto;
+  height: 400px;
+  margin-top: 2rem;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.slide{
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  transition: transform 0.5s ease-in-out;
   overflow: hidden;
 }
-.slider img {
+.slide img {
   width: 100%;
+  height: 100%;
+  overflow: hidden;
   display: none;
 }
 img.displaySlide {
   display: block;
 }
+.btn{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+   
+}
+.prev, .next {
+  margin: 0 20px;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffc857;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+
