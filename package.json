@@ -2,7 +2,7 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel Third_lect/index.html",
+    "dev": "parcel Fifth_lect/index.html",
     "build": "parcel build Third_lect/index.html",
     "test": "jest"
   },
