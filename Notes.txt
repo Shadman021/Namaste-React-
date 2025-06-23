@@ -33,3 +33,26 @@ import Component from "path";
 -Named Export/Import:
 export const Component;
 import {Component} from "path";
+
+(1:19:17)
+#React Hooks - it is a normal JS utility functions
+ There are 2 very imp hooks:
+ - useState()
+ - useEffect()
+
+(1:37:38)
+Whenever the state variable changes react re-render its component.
+
+(1:59:57)
+Why react is fast?
+Because it is doing efficient DOM manipulation, and react can find difference between virtual DOMs and update it.
+
+Ep-6 part 1
+(00: 54 :00)
+Shimmer UI - A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout and shapes of the content that will eventually appear
+
+(1:04:14)
+Condistional Rendering - Rendering on the basis of a condition is know as Condistional rendering.
+
+(1:53:20)
+Whenever the state variable update, react trigger a reconciliation cycle(re-render the component)

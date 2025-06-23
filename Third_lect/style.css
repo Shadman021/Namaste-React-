@@ -32,6 +32,7 @@ body {
   display: flex;
   gap: 2rem;
   align-items: center;
+
 }
 a {
   color: gray;
@@ -43,15 +44,16 @@ a:hover {
   transform: scale(1.2);
   color: rgb(88, 88, 88);
 }
-.search {
+.search{
   display: flex;
-  width: 100%;
+  width: auto;
   justify-content: center;
   gap: 2rem;
+  margin: 2rem 0;
 }
 .searchBar {
   padding: 5px 20px;
-  width: 600px;
+  width: 30rem;
   height: 80%;
   font-size: 1.2rem;
   border: 0;
@@ -75,7 +77,7 @@ a:hover {
   background: #000;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
   margin-top: 2rem;
   overflow: hidden;
   border-radius: 20px;
@@ -84,15 +86,18 @@ a:hover {
 .slide{
   position: absolute;
   width: 100%;
-  height: 400px;
+  height: 500px;
   transition: transform 0.5s ease-in-out;
   overflow: hidden;
+  
 }
+
 .slide img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: none;
+  fill: cover;
 }
 img.displaySlide {
   display: block;
@@ -113,5 +118,54 @@ img.displaySlide {
   border-radius: 10px;
   font-size: 1.2rem;
 }
+.card-container {
+  margin: 2rem 2.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
 
-
+.card{
+  width: 250px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+.shimmerCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 2.3rem;
+  justify-content: center;
+}
+.shimmer-card {
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+.loginBtn{
+  background-color: #ffc857;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  padding: 0px 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  height: 45px;
+  margin: 10px;
+}
+.filterbtn {
+  background-color: #ffc857;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}

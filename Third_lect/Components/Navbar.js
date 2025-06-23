@@ -1,4 +1,6 @@
+import { useState } from 'react';
 const Navbar = () => {
+    let [loginbtn, setLoginbtn] = useState("Login");
     return (<div className="navbar">
         <div className="logo">
             <img className="logoImg" src="https://marketplace.canva.com/EAGK_nqghyY/1/0/1600w/canva-green-and-yellow-illustrative-catering-food-logo-1eeM9ihgRqY.jpg" alt="Logo" />
@@ -9,6 +11,10 @@ const Navbar = () => {
             <a href="#">About</a>
             <a href="#">Contact</a>
         </div>
+        <button className="loginBtn" onClick={() => {
+            loginbtn === "Login" ? setLoginbtn("Logout") : setLoginbtn("Login");
+        }}>{loginbtn}</button>
+        
     </div>)
 }
 
