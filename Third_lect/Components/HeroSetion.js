@@ -25,6 +25,10 @@ const HeroSection = () => {
   }, [slideIndex]);
 
   return (
+    <>
+      <h1 className="text-3xl font-bold">
+      This is home page!
+    </h1>
     <div className="slider">
       <div className="slide" ref={slideRef}>
         <img src="https://images.pexels.com/photos/941869/pexels-photo-941869.jpeg" alt="img1" />
@@ -36,7 +40,10 @@ const HeroSection = () => {
         <button className="prev" onClick={prevSlide}>&#x2039;</button>
         <button className="next" onClick={nextSlide}>&#x203A;</button>
       </div>
+       
     </div>
+  
+    </>
   );
 };
 

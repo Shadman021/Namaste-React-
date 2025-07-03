@@ -13,7 +13,8 @@ Allows updates within the same major version, but also minor and patch releases.
 
 
 (48:35) => 
-Transitive Dependencies => A transitive dependency in computer science refers to a functional dependency pattern where the value of one attribute is determined by another attribute, which in turn is determined by a third attribute. 
+Transitive Dependencies => A transitive dependency in computer science refers to a functional dependency pattern where the value of one attribute is determined by another attribute, which in turn is determined by a third attribute.
+
 like we just installed wanted to install parcel (npm install -D parcel), but we got a node _modules, in which there are many many files, why? Beacuse parcel has its dependencies, its dependencies has its dependencies, and that dependencies has its own dependencies and so on...
 
 Ep-3
@@ -56,3 +57,72 @@ Condistional Rendering - Rendering on the basis of a condition is know as Condis
 
 (1:53:20)
 Whenever the state variable update, react trigger a reconciliation cycle(re-render the component)
+
+Ep-7 part 1
+(05:05)
+useEffect(()=>{
+    console.log("No dependency")
+});
+If there are no dependency array in useEffect then it will be called/run on every render.
+
+useEffect(()=>{
+    console.log("Empty dependency")
+},[]);
+If the dependency array is empty then useEffect is called on only inetial render, and just once.
+
+useEffect(()=>{
+    console.log("Dependency present")
+}[dependency]);
+If there a dependency is useEffect then it is called/run every time the dependency changes.
+
+# 2 types of Routing in web apps
+- Clint Side Routing
+- Server Side Routing
+
+Ep-8 part 1
+Class Based Component
+(12:15)
+Functional Component: It is a function that returns some JSX,
+Class Based Component: It is a class which extend react.componet has a render method which returns some piece of JSX,
+
+(20:10)
+Why do we have to write super props?
+
+(41:30)
+NEVER update state variables directly.
+
+Ep-9
+Single Responsibility Principle ----  SRP (my own shortcut)
+
+(06:15)
+Feature of SRP:
+1. Code becomes more reusable.
+2. Code become more maintainable.
+3. Code become more testable.
+
+(09:15)
+Hook is just a utility function,
+
+Benifits of making custom hooks:-
+1. Make code more readable
+2. Make code more modular
+3. Make code more reusable
+
+(34:30)
+online/offline feature
+
+(1:06:30)
+Chunking        // These all are the same thing, (same meaning, different name)
+Code Splitting
+Dynamic Bundling
+Lazy Loading
+On Demand Loading
+Dynamic Import
+
+
+Personal brand is a concious and intentional effort
+
+Ep-11 part-1
+Higher Order Component
+
+Higher order component is a function that takes a component and returns a component.
