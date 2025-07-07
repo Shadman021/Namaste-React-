@@ -126,3 +126,73 @@ Ep-11 part-1
 Higher Order Component
 
 Higher order component is a function that takes a component and returns a component.
+
+(23:00)
+1. Controlled and Uncontrolled component
+2. Lifting the state up
+
+Ep-11 part-2
+
+. Props Drilling - Prop drilling refers to the process of passing down props through multiple layers of components, even when some of those components do not directly use the props.
+
+. React Context - React Context is a feature in React that provides a way to share data or state throughout the component tree without explicitly passing props down manually at every level.
+   . createContext(),
+   . useContext(),
+   . userContext.consumer(),
+
+Only the data which we are using at multiple places or you feel that you can use that data in multiple places, that is where we will use Context, 
+
+Other wise there would be no need of Props.
+
+What is the differnce between Redux and Context.
+
+Ep-12 part-1
+
+Redux:- 
+- Redux is Not mandatory.
+- Redux and React are different libraries.
+- Redux is not the only library that is use for managing state, There is a library which isknown as Zustand.
+ 
+we will be using Redux Toolkit (RTK).
+
+(19:00)
+VERY IMPORTANT
+
+When we want to add any items to our cart by clicking ADD button, How can we do that?  (Ans 182)
+
+Understant it using Redux Toolkit
+
+Redux Store: It is nothing but a big whole object, and it is kept in a central global place. Any componentany access Redux store, it can write data it can read data from that store.
+
+Is it a good practice to keep all the data in the whole big object ?
+  Yes, it is completely fine to keep all the data inside a one big object file.
+
+
+But keeping all the data in one object file make the file clumsy.
+
+So to prevent our file from becoming clumsy we Slices(small portion of redux store) in our redux store.
+
+Slices - A slice represents a specific portion of the application's state, bundled with its related actions and reducers
+
+example of Slices that we can create : Cart slice, Theam slice, User slice, etc.
+
+
+BUT we can't directly modify our cart slice...
+
+When we click on add button it DISPATCHES an ACTION which calls an reduced function and that updates the cart slice.
+
+So now we know how to update/add data from the component to the slice,
+
+(31:00)
+BUT, How will can we see data from slice to our component?
+
+So, for that we use something know as SELECTOR,
+
+We use selector to read data from the Slice, and the selector will modify our react component
+This is know as Subscribing to the store, means the data is in the sync with the store, If the data in my store changes my react componet will update automagically
+
+                           DISPATCH      REDUCED                     SUBSCRIBED
+             [ADD BTN] --> [ACTION] --> [FUNCTION] --> [{STORE}] --> [SELECTOR] --> [Upadete's the component]
+               ⬇                                                                               ⬆
+                ➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡xxxxxxxxxxxxxx➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡
+                       Components are not updated directly, It follow's these above steps.

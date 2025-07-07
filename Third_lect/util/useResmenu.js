@@ -18,16 +18,12 @@ const useResmenu = (resId) => {
             const groupedCardObj = [...cardsArray].
                 find((card) => card?.groupedCard?.cardGroupMap?.REGULAR);
 
-            const regularCards = groupedCardObj?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+            let regularCards = groupedCardObj?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
 
-
-            const allItemCards = regularCards
-                .flatMap(c => c?.card?.card?.itemCards || [])
-                .filter(Boolean);
-
-            setMenudata(allItemCards);
-
-            console.log("Menu API called successfully");
+            const ItemCards = regularCards.filter(c => c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory" || c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory")
+                //    console.log("ItemCards: ",ItemCards);
+    
+            setMenudata(ItemCards);
         }
 
         fun();

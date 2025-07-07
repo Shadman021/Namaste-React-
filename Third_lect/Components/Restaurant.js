@@ -16,8 +16,6 @@ const Resturant = () => {
         fetchdata();
     }, []);
         
-
-    console.log("listdata",listofres);
     
 
     const fetchdata = async () => {
@@ -37,22 +35,9 @@ const Resturant = () => {
     return (
         <div>
             <Search listofres={listofres} setFilteredres={setFilteredres} setListofres={setListofres} />
-
-            {/* {listofres.length === 0 ? (
-                <Shimmer />) : (
-                <div className="card-container">
-                    {filteredres.map((restaurant) => (
-                        <Link to={`/menu/${restaurant.info.id}`} key={restaurant.info.id}>
-                            {Object.keys(restaurant?.info?.aggregatedDiscountInfoV3 || {}).length === 0
-                                ? <Card info={restaurant.info} />
-                                : <PromotedCard info={restaurant.info} />
-                            }
-                        </Link>
-                    ))}
-                </div>
-            )} */
+           {listofres?.length === 0 ? (<Shimmer />) : (
             <div className="card-container">
-                    {filteredres.map((restaurant) => (
+                    {filteredres?.map((restaurant) => (
                         <Link to={`/menu/${restaurant.info.id}`} key={restaurant.info.id}>
                             {Object.keys(restaurant?.info?.aggregatedDiscountInfoV3 || {}).length === 0
                                 ? <Card info={restaurant.info} />
@@ -60,7 +45,7 @@ const Resturant = () => {
                             }
                         </Link>
                     ))}
-                </div>}
+                </div>)}
         </div>
     )
 }

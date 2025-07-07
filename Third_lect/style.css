@@ -42,6 +42,7 @@
 }
 .nav{
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
   list-style: none;
@@ -66,7 +67,7 @@
 }
 .searchBar {
   padding: 5px 20px;
-  width: 60vw;
+  width: 40vw;
   height: 80%;
   font-size: 1.2rem;
   border: 0;
@@ -193,7 +194,7 @@ img.displaySlide {
   padding: 0px 30px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  width: 100px;
+  width: auto;
   margin: 10px;
   outline: none;
   border: none;
@@ -220,12 +221,7 @@ img.displaySlide {
   background-position: center;
   background-repeat: no-repeat;
 }
-.menu{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-}
+
 .resName{
   font-size: 2.5rem;
   font-family: sans-serif;

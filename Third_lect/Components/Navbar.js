@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import {Link} from 'react-router-dom';
 import useOnlineStatus from '../util/useOnlineStatus'; 
+import UserContext from '../util/UserContext';
 const Navbar = () => {
+
+    const data = useContext(UserContext);
+    console.log(data);
+
     let [loginbtn, setLoginbtn] = useState("Login");
 
     const onlineStatus = useOnlineStatus();
