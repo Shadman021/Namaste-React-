@@ -6,7 +6,7 @@ const ResturantCategory = (props) => {
     const showList = props.showList;
     const setShowindex = props.setShowindex;
     const handleClick = () => {
-        (showList === setShowindex) ? setShowindex(false) : setShowindex();
+       setShowindex();
     }
 
     return (
@@ -20,7 +20,11 @@ const ResturantCategory = (props) => {
                     </span>
                     <span>🔽</span>
                 </div>
+                <div
+                    className={`transition-all duration-500 overflow-hidden ${showList ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+                >
                 {showList && <Menulist key={props.data.itemCards.id} data={props.data.itemCards} />}
+                </div>
             </div>
         </div>
     )

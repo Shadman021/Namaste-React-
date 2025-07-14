@@ -191,8 +191,35 @@ So, for that we use something know as SELECTOR,
 We use selector to read data from the Slice, and the selector will modify our react component
 This is know as Subscribing to the store, means the data is in the sync with the store, If the data in my store changes my react componet will update automagically
 
-                           DISPATCH      REDUCED                     SUBSCRIBED
+                           DISPATCH      REDUCED         REDUX       SUBSCRIBED
              [ADD BTN] --> [ACTION] --> [FUNCTION] --> [{STORE}] --> [SELECTOR] --> [Upadete's the component]
-               ⬇                                                                               ⬆
-                ➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡xxxxxxxxxxxxxx➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡
+                 ⬇                                                                               ⬆
+                  ➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡XXXXXXXXXXXXXXXX➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡➡
                        Components are not updated directly, It follow's these above steps.
+
+useSelector from react-redux for reading data from the store.
+useDispatch from react-redux for dispatching data from the store.
+
+    ........IMPORTANT.........
+What's the difference between these 3 ?
+
+onClick=(handleClick);
+onClick=(() => handleClick(items));
+onClick=(handleClick(items));
+
+
+Ep-13-part 1 
+
+# Types of Testing(for developer) {in this course we will focus on unit and Integration testing }
+
+- Unit testing = Testing one component in isolation
+- Integration testing = Testing process where different modules or components of an application are combined and tested as a group to ensure they interact correctly
+- End to End testing (e2e testing)= testing methodology that verifies an application's workflow from start to finish, ensuring all integrated components work together as expected from a user's perspective. 
+
+We will be using React Testing library.
+
+React testing library uses something known as Jest.
+Jest is JavaScript Testing Framework.
+
+And React teesting library is build on top of DOM Testing library, and DOM Testing library uses jest behind the scene,
+So that's why React testing library needs Jest in our project.

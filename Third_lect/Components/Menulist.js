@@ -1,7 +1,17 @@
+import { useDispatch } from "react-redux";
+import { addItems } from "../util/cartSlice";
 const Menulist = (props) => {
     const lists = props.data;
 
+    const dispatch = useDispatch();
+    const handleClick = (list) => {
+        // Dispatch an action
+        dispatch(addItems(list));
+        console.log(list)
+    }
+
     return (
+
         <div>
             {lists?.map((list) =>
                 <div key={list?.card?.info?.id} className="my-[.5rem]  p-2 border-gray-400 border-b-2 flex justify-between">
@@ -11,8 +21,8 @@ const Menulist = (props) => {
                         <p className="flex flex-wrap text-xs">Description: {list?.card?.info?.description}</p>
                     </div>
                     <div className="w-2/12 p-1 relative">
-                        <img className="w-[100%] h-[100%]" src={`https://media-assets.swiggy.com/swiggy/image/upload/${list?.card?.info?.imageId}`} />
-                         <button className="bg-white absolute p-0.5 text-xs m-auto cursor-pointer  px-2 py-1 rounded shadow bottom-0 left-1/2 transform -translate-x-1/2  "
+                        <img className="w-[100%] h-[100%] rounded-lg" src={`https://media-assets.swiggy.com/swiggy/image/upload/${list?.card?.info?.imageId}`} />
+                        <button className="bg-white absolute p-0.5 text-xs m-auto cursor-pointer  px-2 py-1 rounded shadow bottom-0 left-1/2 transform -translate-x-1/2 " onClick={() => handleClick(list)}
                         >ADD+</button>
                     </div>
                 </div>

@@ -33,7 +33,7 @@ const Menu = () => {
                 data={category.card.card}
                 showList={index === showindex? true :false}
                 setShowindex={()=>{
-                    setShowindex(index);
+                    setShowindex(index === showindex ? null : index);
                 }}
             />)}
         </div>

@@ -2,7 +2,13 @@ import { useState,useContext } from 'react';
 import {Link} from 'react-router-dom';
 import useOnlineStatus from '../util/useOnlineStatus'; 
 import UserContext from '../util/UserContext';
+import { useSelector } from 'react-redux';
+import appStore from '../util/appStore';
 const Navbar = () => {
+
+    // sunscribig to the store using Selector
+
+    const cartitem = useSelector((store) => store.cart.items)
 
     const data = useContext(UserContext);
     console.log(data);
@@ -21,6 +27,7 @@ const Navbar = () => {
             <li><Link to="About/">About</Link></li>
             <li><Link to="contact/">Contact</Link></li>
             <li><Link to="grocery/">Grocery</Link></li>
+            <li><Link to="cart/" className='font-bold'>🛒- ({cartitem.length})</Link></li>
             <li className='w-auto'>OnlineStatus:{onlineStatus?"🟢":"🔴"}</li>
             </ul>
         </div>
